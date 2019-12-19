@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="chromeTest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="scripts.p4">
+        <methods>
+          <include name="precond"/>
+          <include name="postcond"/>
+          <include name="pomactilogin"/>
+        </methods>
+      </class> <!-- scripts.p4 -->
+      <class name="scripts.p3">
+        <methods>
+          <include name="postcond"/>
+          <include name="precond"/>
+          <include name="pomactilogin"/>
+        </methods>
+      </class> <!-- scripts.p3 -->
+      <class name="scripts.p5">
+        <methods>
+          <include name="precond"/>
+          <include name="postcond"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- scripts.p5 -->
+    </classes>
+  </test> <!-- chromeTest(failed) -->
+  <test thread-count="5" name="firefoxTest(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="scripts.p4">
+        <methods>
+          <include name="precond"/>
+          <include name="postcond"/>
+          <include name="pomactilogin"/>
+        </methods>
+      </class> <!-- scripts.p4 -->
+      <class name="scripts.p3">
+        <methods>
+          <include name="postcond"/>
+          <include name="precond"/>
+          <include name="pomactilogin"/>
+        </methods>
+      </class> <!-- scripts.p3 -->
+    </classes>
+  </test> <!-- firefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
